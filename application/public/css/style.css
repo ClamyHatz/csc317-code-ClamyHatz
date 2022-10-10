@@ -200,3 +200,6 @@ form{
 .article{
   margin-top: 30px;
 }
+body{
+  font-family: FreeMono, monospace;
+}
