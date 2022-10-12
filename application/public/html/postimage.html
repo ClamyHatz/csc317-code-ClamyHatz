@@ -19,23 +19,20 @@
         <a href="viewpost.html" class="viewnav">View Post</a>
     </div>
     <div class="article">
-        <form action="viewpost.html" method="POST">
+        <form class="postimform" action="viewpost.html" method="POST">
             <fieldset>
                 <legend>Post</legend>
-                <label for="title">Post Title</label>
-                <input type="text" name="title" required placeholder="Post Title"/>
+                <input class="forms" type="text" name="title" required placeholder="Post Title"/>
                 <br>
-                <label for="descript">Post Description</label>
-                <input type="text" name="descript" required placeholder="Post Description"/>
+                <input class="forms" type="text" name="descript" required placeholder="Post Description"/>
                 <br>
-                <label for="imge">Post Image</label>
-                <input type="file" name="imge" required placeholder="Post Image"/>
+                <input calss="custom-file-upload" type="file" name="imge" required placeholder="Post Image"/>
                 <br>
-                <input type="checkbox" id="usepl" name="usepl" value="agree">
+                <input class="check" type="checkbox" id="usepl" name="usepl" value="agree">
                 <label for="usepl"> Accept Use Policy for uploading images</label>
                 <br>
             </fieldset>
-            <input type="submit" value="Post">
+            <input class="postsub" type="submit" value="Post">
         </form>
     </div> 
 </body>
