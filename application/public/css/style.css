@@ -187,14 +187,6 @@ body.postpage{
 body.viewpage{
   background-image: url(purpleback.png);
 }
-.footer{
-  color: white;
-  text-align: center;
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .article{
   margin-top: 30px;
 }
@@ -337,4 +329,17 @@ input[type="file" i] {
   font-size: 20px;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+.cat{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer{
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
