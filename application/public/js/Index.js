@@ -4,6 +4,15 @@
  * @param {*} data used to fill in the dom node
  */
 
+let NumbPhotos = 0;
+
+let counterDisplayElem = document.getElementById("photo-count");
+
+
+function updateDisplay(){
+    counterDisplayElem.innerHTML = NumbPhotos;
+};
+
 function buildCardsUsinJSAPI(containter, data) {
     let cardDiv = document.createElement("div"); //create div element
     cardDiv.setAttribute("id", "product-card"); //set id HTML attribute 
@@ -40,9 +49,11 @@ function fetchPhotos() {
         //for each product , build a card HTML element
         data.forEach((photo) => {
           buildCardsUsinJSAPI(containerFragment, photo);
+          NumbPhotos++;
         });
         //add the container fragment to DOM(the product-list div)
         containerDiv.appendChild(containerFragment);
+        updateDisplay();
       })
       .catch((error) => {
         console.log(error);
@@ -61,6 +72,8 @@ function FadeOut(){
         } else {
             clearInterval(fadeEffect);
             fadeTarget.remove();
+            NumbPhotos--;
+            updateDisplay();
         }
     }, 200);
 }
