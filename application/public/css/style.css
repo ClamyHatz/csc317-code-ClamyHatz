@@ -317,6 +317,7 @@ form{
   size: 30px;
   font-size: 30px;
   font: solid black;
+  margin-bottom: 5px;
 }
 legend{
   margin-bottom: 10px;
@@ -344,9 +345,19 @@ input[type="file" i] {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-input:invalid {
-  background-color: ivory !important;
+.invalid {
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
+.valid{
   border: none !important;
-  outline: 2px solid red !important;
-  border-radius: 5px !important;
+  border-bottom: 2px solid black !important;
+  background-color: white !important;
+  width: 600px !important;
+  height: 100px !important;
+  size: 30px !important;
+  font-size: 30px !important;
+  font: solid black !important;
+  margin-bottom: 5px !important;
 }
