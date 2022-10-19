@@ -19,31 +19,30 @@
         <a href="viewpost.html" class="viewnav">View Post</a>
     </div>
     <div class="article">
-        <form class="regiform" action="login.html" method="POST">
-            <fieldset>
-                <legend>Register</legend>
-                <input class="forms" class="regform" type="text" name="uname" required placeholder="User Name"/>
-                <br>
-                <input class="forms" class="regform" type="text" name="emil" required placeholder="email@whatever.com"/>
-                <br>
-                <input class="forms" class="regform" type="password" name="pawrd" required placeholder="Password"/>
-                <br>
-                <input class="forms" class="regform" type="password" name="pawrd" required placeholder="Confirm Password"/>
-                <br>
-                <input class="check" type="checkbox" id="13+" name="13+" value="Age">
-                <label for="13+"> I am above 13 years of age</label>
-                <br>
-                <a class="TOSLink" href="https://google.com/"> TOS and Privacy Rules  </a>
-                <br>
-                <input class="check" type="checkbox" id="TOS" name="TOS" value="agree">
-                <label for="TOS"> Accept TOS and Privacy rules</label>
-                <br>
-            </fieldset>
-            <input class="regsub" type="submit" value="Register">
+        <form class="regiform" action>
+            <legend>Register</legend>
+            <input class="forms" type="text" id="uname" required minlength="3" placeholder="User Name"/>
+            <br>
+            <input class="forms" type="email" id="emil" required placeholder="email@whatever.com"/>
+            <br>
+            <input class="forms" type="text" id="pawrd" required minlength="8" placeholder="Password"/>
+            <br>
+            <input class="forms" type="text" id="pawrdc" required placeholder="Confirm Password"/>
+            <br>
+            <input class="check" type="checkbox" id="13+" name="13+" value="2" required>
+            <label for="13+"> I am above 13 years of age</label>
+            <br>
+            <a class="TOSLink" href="https://google.com/"> TOS and Privacy Rules  </a>
+            <br>
+            <input class="check" type="checkbox" id="TOS" name="TOS" value="2" required>
+            <label for="TOS"> Accept TOS and Privacy rules</label>
+            <br>
+            <input class="regsub" type="submit" id="submit">
         </form>
     </div>
     <div class="cat">
         <img src="..\css\sakamotogreen.png">
     </div>
 </body>
+<script defer type="text/javascript" src="../js/registration.js"></script> 
 </html>

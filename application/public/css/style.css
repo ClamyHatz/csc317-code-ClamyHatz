@@ -303,7 +303,7 @@ form{
   border: none;
   margin-top: 30px;
 }
-.regsub:hover{
+.postsub:hover{
   background-color: white;
   color: black;
   border: solid blue;
@@ -334,6 +334,7 @@ input[type="file" i] {
   position: fixed;
   bottom: 0;
   width: 100%;
+  width: 188px;
 }
 .footer{
   color: white;
@@ -342,4 +343,10 @@ input[type="file" i] {
   top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+input:invalid {
+  background-color: ivory !important;
+  border: none !important;
+  outline: 2px solid red !important;
+  border-radius: 5px !important;
 }
