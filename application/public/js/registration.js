@@ -10,7 +10,7 @@ function CheckUserName() { //name of function
         return true;
     }
     else{ 
-        inputtxt.setCustomValidity("Invalid field");//changes the feild to invalid
+        inputtxt.setCustomValidity("Needs to start with a letter and be 3 characters long");//changes the feild to invalid
         return false;
     }
 }
@@ -28,7 +28,7 @@ function CheckPassword() {
         return true;
     }
     else{ 
-        inputtxt.setCustomValidity("Invalid field");//changes the feild to invalid
+        inputtxt.setCustomValidity("8 or more characters AND contains at least 1 upper case letter AND 1 number and 1 of the following special characters: / * - + ! @ # $ ^ & ~ [ ] ");//changes the feild to invalid
         return false;
     }
 
@@ -44,7 +44,7 @@ function CheckConfirmPassword(){
         return true;
     }
     else{ 
-        conpaswrd.setCustomValidity("Invalid field");//changes the feild to invalid
+        conpaswrd.setCustomValidity("Must be the same as Password");//changes the feild to invalid
         return false;
     }
 }
