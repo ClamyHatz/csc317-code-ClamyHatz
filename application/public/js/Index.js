@@ -15,9 +15,8 @@ function updateDisplay(){
 
 function buildCardsUsinJSAPI(containter, data) {
     let cardDiv = document.createElement("div"); //create div element
-    cardDiv.setAttribute("id", "product-card"); //set id HTML attribute 
+    cardDiv.setAttribute("id", data.id); //set id HTML attribute
     cardDiv.setAttribute("class", "product-card"); //set class HTML attribute 
-    cardDiv.addEventListener("click", FadeOut);
     let imgDiv = document.createElement("img"); //create img element
     imgDiv.setAttribute("src", data.thumbnailUrl); //set src HTML attribute
     imgDiv.setAttribute("class", "prod-img"); //set class HTML attribute
@@ -30,6 +29,7 @@ function buildCardsUsinJSAPI(containter, data) {
     cardDiv.appendChild(imgDiv) // add the img tag to product-card div
     cardDiv.appendChild(infoDiv); // add the img tag to product-card div
     containter.appendChild(cardDiv); // add product-card div to prdouct list div
+    cardDiv.addEventListener("click", () => {FadeOut(data.id)});
   }
   
 function fetchPhotos() {
@@ -61,20 +61,24 @@ function fetchPhotos() {
   
   }
 fetchPhotos();
-function FadeOut(){
-    var fadeTarget = document.getElementById("product-card");
-    var fadeEffect = setInterval(function () {
-        if (!fadeTarget.style.opacity) {
-            fadeTarget.style.opacity = 1;
-        }
-        if (fadeTarget.style.opacity > 0) {
-            fadeTarget.style.opacity -= .4;
-        } else {
-            clearInterval(fadeEffect);
-            fadeTarget.remove();
-            NumbPhotos--;
-            updateDisplay();
-        }
-    }, 200);
+function FadeOut(e){
+  var fadeTarget = document.getElementById(e);
+  document.get
+  console.log(fadeTarget);
+  console.log("stuff")
+  console.log(e)
+  var fadeEffect = setInterval(function () {
+      if (!fadeTarget.style.opacity) {
+          fadeTarget.style.opacity = 1;
+      }
+      if (fadeTarget.style.opacity > 0) {
+          fadeTarget.style.opacity -= .4;
+      } else {
+          clearInterval(fadeEffect);
+          fadeTarget.remove();
+          NumbPhotos--;
+          updateDisplay();
+      }
+  }, 200);
 }
   
