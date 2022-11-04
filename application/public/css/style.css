@@ -1,4 +1,4 @@
-a{
+a {
   color: white;
   padding: 15px 32px;
   text-decoration: none;
@@ -8,11 +8,13 @@ a{
   margin-right: 15px;
   transition-duration: .4s;
 }
-.TOSLink{
+
+.TOSLink {
   color: black !important;
   text-decoration: underline !important;
 }
-button{
+
+button {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -22,6 +24,7 @@ button{
   margin-left: 15px;
   margin-right: 15px;
 }
+
 input[type=submit] {
   padding: 15px 32px;
   text-decoration: none;
@@ -31,71 +34,19 @@ input[type=submit] {
   margin-left: 15px;
   margin-right: 15px;
 }
-.mainnavs{
+
+.mainnavs {
   background-color: white;
   cursor: not-allowed;
   font-family: FreeMono, monospace;
 }
-.indexnavmain{
-  border: solid red;
-}
-.indexnav{
-  background-color: red;
-}
-.indexnav:hover{
-  background-color: white;
-  color: black;
-  border: solid red;
-}
-.loginnavmain{
-  border: solid rgb(255, 208, 0);
-}
-.loginnav{
-  background-color: rgb(255, 208, 0);
-}
-.loginnav:hover{
-  background-color: white;
-  color: black;
-  border: solid rgb(255, 208, 0);
-}
-.regnavmain{
-  border: solid green;
-}
-.regnav{
-  background-color: green;
-}
-.regnav:hover{
-  background-color: white;
-  color: black;
-  border: solid green;
-}
-.postnavmain{
-  border: solid blue;
-}
-.postnav{
-  background-color: blue;
-}
-.postnav:hover{
-  background-color: white;
-  color: black;
-  border: solid blue;
-}
-.viewnavmain{
-  border: solid purple;
-}
-.viewnav{
-  background-color: purple;
-}
-.viewnav:hover{
-  background-color: white;
-  color: black;
-  border: solid purple;
-}
-.nav{
+
+.nav {
   text-align: center;
   margin-top: 10px;
 }
-.header{
+
+.header {
   text-align: center;
   padding: 1px 0;
   justify-content: center;
@@ -103,110 +54,34 @@ input[type=submit] {
   margin-bottom: 10px;
   width: 250px;
 }
-.headerindex{
-  background-color: rgb(255,178,178);
-  border: 4px solid red;
-}
-.headerlogin{
-  background-color: rgb(255,241,178);
-  border: 4px solid rgb(255, 208, 0);
-}
-.headerreg{
-  background-color: rgb(178,217,178);
-  border: 4px solid green;
-}
-.headerpost{
-  background-color: rgb(178,178,255);
-  border: 4px solid blue;
-}
-.headerview{
-  background-color: rgb(217,178,217);
-  border: 4px solid purple;
-}
-.article{
+
+.container {
   text-align: center;
-  margin-top: 30px;
 }
-body.indexpage{
-  background-image: url(redback.png);
-}
-body.loginpage{
-  background-image: url(yellowback.png);
-}
-body.regpage{
-  background-image: url(greenback.png);
-}
-body.postpage{
-  background-image: url(blueback.png);
-}
-body.viewpage{
-  background-image: url(purpleback.png);
-}
-body{
+
+body {
   font-family: FreeMono, monospace;
   margin: 0;
 }
-.logsub{
-  margin-top: 50px;
+
+fieldset {
+  display: contents;
 }
-fieldset{
-  display:contents;
-}
-input{
+
+input {
   padding-bottom: 0;
 }
-form{
+
+form {
   background-color: white;
   margin: auto;
   width: 700px;
   padding-top: 50px;
   padding-bottom: 50px;
-}
-.loginform{
-  border: 4px solid rgb(255, 208, 0);
-}
-.regiform{
-  border: 4px solid green;
-}
-.postimform{
-  border: 4px solid blue;
-}
-.logsub{
-  background-color: rgb(255, 208, 0);
-  color: white;
-  transition-duration: .4s;
-  border: none;
-}
-.logsub:hover{
-  background-color: white;
-  color: black;
-  border: solid rgb(255, 208, 0);
-}
-.regsub{
-  background-color: green;
-  color: white;
-  transition-duration: .4s;
-  border: none;
   margin-top: 30px;
 }
-.regsub:hover{
-  background-color: white;
-  color: black;
-  border: solid green;
-}
-.postsub{
-  background-color: blue;
-  color: white;
-  transition-duration: .4s;
-  border: none;
-  margin-top: 30px;
-}
-.postsub:hover{
-  background-color: white;
-  color: black;
-  border: solid blue;
-}
-.forms{
+
+.forms {
   border: none;
   border-bottom: 2px solid black;
   background-color: white;
@@ -217,25 +92,30 @@ form{
   font: solid black;
   margin-bottom: 5px;
 }
-legend{
+
+legend {
   margin-bottom: 10px;
 }
-label{
+
+label {
   font-size: 25px;
 }
+
 input[type="file" i] {
   font-family: FreeMono, monospace;
   font-size: 20px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.cat{
+
+.cat {
   position: fixed;
   bottom: 0;
   width: 100%;
   width: 188px;
 }
-.footer{
+
+.footer {
   color: white;
   text-align: center;
   position: absolute;
@@ -243,12 +123,14 @@ input[type="file" i] {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .invalid {
   border: none;
   outline: 2px solid red;
   border-radius: 5px;
 }
-.valid{
+
+.valid {
   border: none !important;
   border-bottom: 2px solid black !important;
   background-color: white !important;
@@ -259,6 +141,7 @@ input[type="file" i] {
   font: solid black !important;
   margin-bottom: 5px !important;
 }
+
 .product-list {
   display: grid;
   max-width: 1200px;
@@ -316,12 +199,12 @@ input[type="file" i] {
   background-color: red;
 }
 
-.photo_count{
+.photo_count {
   color: white;
   font-size: 30px;
 }
 
-.photo-count{
+.photo-count {
   background-color: white;
   text-align: center;
   padding: 1px 0;
@@ -331,4 +214,54 @@ input[type="file" i] {
   margin-bottom: 10px;
   width: 100px;
   border: 4px solid red;
+}
+
+.indexnav {
+  background-color: red;
+}
+
+.indexnav:hover {
+  background-color: white;
+  color: black;
+  border: solid red;
+}
+
+.loginnav {
+  background-color: rgb(255, 208, 0);
+}
+
+.loginnav:hover {
+  background-color: white;
+  color: black;
+  border: solid rgb(255, 208, 0);
+}
+
+.regnav {
+  background-color: green;
+}
+
+.regnav:hover {
+  background-color: white;
+  color: black;
+  border: solid green;
+}
+
+.postnav {
+  background-color: blue;
+}
+
+.postnav:hover {
+  background-color: white;
+  color: black;
+  border: solid blue;
+}
+
+.viewnav {
+  background-color: purple;
+}
+
+.viewnav:hover {
+  background-color: white;
+  color: black;
+  border: solid purple;
 }
