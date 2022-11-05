@@ -28,3 +28,9 @@ body.container {
     color: black;
     border: solid blue;
 }
+
+#cat{
+    width:188px;
+    height: 270px;
+    background: url(sakamotoblue.png);
+}

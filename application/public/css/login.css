@@ -32,6 +32,8 @@ body.container {
     border: solid rgb(255, 208, 0);
 }
 
-.cat{
-    background: url("/public/css/sakamotoyellow.png");
+#cat{
+    width:188px;
+    height: 270px;
+    background: url(sakamotoyellow.png);
 }

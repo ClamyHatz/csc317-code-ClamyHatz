@@ -10,3 +10,9 @@
 body.container {
     background-image: url(redback.png);
 }
+
+#cat{
+    width:188px;
+    height: 270px;
+    background: url(sakamotored.png);
+}
