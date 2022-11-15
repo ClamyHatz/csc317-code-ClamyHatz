@@ -10,7 +10,7 @@ router.get("/login", function(req,res){
   res.render('login', {css:["login.css"]})
 });
 router.get("/registration", function(req,res){
-  res.render('registration',{css:["registration.css"], js:["registration.js"]})
+  res.render('registration',{css:["registration.css"]})
 });
 router.get("/postimage", function(req,res){
   res.render('postimage',{css:["postimage.css"]})
