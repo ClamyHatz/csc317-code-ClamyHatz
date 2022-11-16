@@ -6,6 +6,8 @@ router.post('/registration', function(req,res,next){
   //server validation
   db.query("select id from users where username=?", [username])
     .then(function([results, fields]){
+      res.json(results);
+      /*
       if(results && results.length === 0){
         return db.query("select id from users where email=?", [email])
           .then(function([results, fields]){
@@ -27,7 +29,7 @@ router.post('/registration', function(req,res,next){
           })
       } else {
         throw new Error('username exists');
-      }
+      }*/
     })
     .catch(function(err){
       next(err);

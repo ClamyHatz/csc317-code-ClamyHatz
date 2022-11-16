@@ -38,7 +38,7 @@ async function makeDatabase(connection) {
 async function makeUsersTable(connection) {
   const [result, _] = await connection.query(
     // Users Table SQL Goes here
-    `CREATE TABLE IF NOT EXISTS csc317db.useres (
+    `CREATE TABLE IF NOT EXISTS csc317db.users (
       id INT NOT NULL AUTO_INCREMENT,
       username VARCHAR(64) NOT NULL,
       email VARCHAR(64) NOT NULL,
