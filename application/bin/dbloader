@@ -41,13 +41,13 @@ async function makeUsersTable(connection) {
     `CREATE TABLE IF NOT EXISTS csc317db.users (
       id INT NOT NULL AUTO_INCREMENT,
       username VARCHAR(64) NOT NULL,
-      email VARCHAR(64) NOT NULL,
-      password VARCHAR(128) NOT NULL,
+      email VARCHAR(128) NOT NULL,
+      password VARCHAR(255) NOT NULL,
       createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
       PRIMARY KEY (id),
       UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE,
-      UNIQUE INDEX username_UNIQUE (username ASC) VISIBLE,
-      UNIQUE INDEX email_UNIQUE (email ASC) VISIBLE)
+      UNIQUE INDEX email_UNIQUE (email ASC) VISIBLE,
+      UNIQUE INDEX username_UNIQUE (username ASC) VISIBLE)
     ENGINE = InnoDB`
   );
 

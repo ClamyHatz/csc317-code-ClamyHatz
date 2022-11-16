@@ -6,10 +6,10 @@ router.post('/registration', function(req,res,next){
   //server validation
   db.query("select id from users where username=?", [username])
     .then(function([results, fields]){
-      if(results && results.length === 0){
+      if(results && results.length == 0){
         return db.query("select id from users where email=?", [email])
           .then(function([results, fields]){
-            if(results && results.length === 0){
+            if(results && results.length == 0){
               return db.query('insert into users(username, email, password) value (?,?,?)', [username, email, password])
             } else {
               throw new Error('email exists');
