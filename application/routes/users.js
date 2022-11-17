@@ -1,5 +1,7 @@
+//SELECT * FROM csc317db.users //to use in workbench
 var express = require('express');
 var router = express.Router();
+const bcrypt = required();
 const db = require('../config/database');
 router.post('/registration', function(req,res,next){
   const {username, email, password} = req.body;
