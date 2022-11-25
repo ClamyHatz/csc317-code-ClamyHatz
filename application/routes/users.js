@@ -1,7 +1,7 @@
 //SELECT * FROM csc317db.users //to use in workbench
 var express = require('express');
 var router = express.Router();
-const bcrypt = required();
+//const bcrypt = required();
 const db = require('../config/database');
 router.post('/registration', function(req,res,next){
   const {username, email, password} = req.body;
@@ -41,14 +41,19 @@ router.post('/registration', function(req,res,next){
 
 router.post('/login', function(req,res,next){
   const {username, password} = req.body;
-  db.query("select id, username, email from users where username=? AND password=?", [username, password])
+  db.query("select id, username, password from users where username=? AND password=?", [username, password])
     .then(function([results, fields]){
       if(results && results.length == 1){
-        res.redirect('/');
+        let dbPassword = results[0].password;
+        return bcrypt.compare(password, password)
       } else {
         throw new Error('Invalid User Credentials')
       }
-    }).catch(function(err){
+    })
+    .then(function(passwordMatch){
+      res.redirect('/');
+    })
+    .catch(function(err){
       next(err);
     })
 });
