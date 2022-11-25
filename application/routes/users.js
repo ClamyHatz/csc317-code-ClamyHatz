@@ -15,31 +15,44 @@ router.post('/registration', function(req,res,next){
             if(results && results.length == 0){
               return bcrypt.hash(password, 2);
             } else {
-              throw new Error('email exists');
+              throw new UserError('email exists', "/registration", 200);
             }
           }).then(function(hashedPassword){
             return db.query('insert into users(username, email, password) value (?,?,?)', [username, email, hashedPassword])
           })
-
           .then(function([results, fields]){
             if(results && results.affectedRows){
-              res.redirect('/login');
+              req.flash("success", 'Registration Successful!')
+              req.session.save(function(saveError){
+                res.redirect('/login');
+              })
             } else {
-              throw new Error('user could not be created')
+              throw new UserError('user could not be created', "/registration", 200);
             }
-          }) .catch(function(err){
-            res.redirect('/registration')
-            next(err)
-          })
+          }) 
           .catch(function(err){
-            next(err);
+            if(err instanceof UserError){
+              req.flash("error", err.getMessage());
+              req.session.save(function(saveError){
+                res.redirect(err.getRedirectURL());
+              })
+            } else {
+              next(err);
+            } 
           })
       } else {
-        throw new Error('username exists');
+        throw new UserError('username exists', "/registration", 200);
       }
     })
     .catch(function(err){
-      next(err);
+      if(err instanceof UserError){
+        req.flash("error", err.getMessage());
+        req.session.save(function(saveError){
+          res.redirect(err.getRedirectURL());
+        })
+      } else {
+        next(err);
+      } 
     })
 });
 
@@ -85,16 +98,19 @@ router.post('/login', function(req,res,next){
 });
 
 router.post("/logout", function(req, res, next){
-  req.session.destroy(function(destroyError){
-    if(destroyError){
-      next(err);
-    } else {
-      res.json({
-        status: 200,
-        message: "You have been logged out"
-      });
-    }
-  })
+  req.flash("success", 'Log Out Successful!')
+    req.session.save(function(saveError){
+      req.session.destroy(function(destroyError){
+        if(destroyError){
+          next(err);
+        } else {
+          res.json({
+            status: 200,
+            message: "You have been logged out"
+          });
+        }
+      })
+    })
 })
 
 module.exports = router;

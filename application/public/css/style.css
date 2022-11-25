@@ -265,3 +265,25 @@ input[type="file" i] {
   color: black;
   border: solid purple;
 }
+.alert-danger{
+  position: fixed;
+  margin: auto;
+  width: 250px;
+  left: 50%;
+  margin-left:  -129px;
+  margin-top: 1%;
+  height: auto;
+  background-color: red;
+  border: 4px solid red;
+}
+.alert-success{
+  position: fixed;
+  margin: auto;
+  width: 250px;
+  left: 50%;
+  margin-left:  -129px;
+  margin-top: 1%;
+  height: auto;
+  background-color: green;
+  border: 4px solid green;
+}

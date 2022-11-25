@@ -15,6 +15,29 @@
 <body>
   {{#if (nonEmptyObject messages)}}
     {{> flashmessage}}
+    <script>
+      function FadeOut(){
+        var timer = 0;
+        var fadeTarget = document.getElementById("flash-message");
+        var fadeEffect = setInterval(function () {
+          if (timer < 7) {
+            timer++;
+          } else {
+            if (!fadeTarget.style.opacity) {
+              fadeTarget.style.opacity = 1;
+            }
+            if (fadeTarget.style.opacity > 0) {
+              fadeTarget.style.opacity -= .2;
+            } else {
+              fadeTarget.remove();
+              timer = 0;
+              clearInterval(fadeEffect);
+            }
+          }
+        }, 500);
+      }
+      FadeOut();
+    </script>
   {{/if}}
   {{>header}}
   {{>nav}}
