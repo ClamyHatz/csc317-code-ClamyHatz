@@ -1,2 +1,10 @@
-<body class="container">
-</body>
+<main class="container">
+    {{#each results}}
+    <div>
+        <img src="{{this.thumbnail}}">
+        <p>{{this.title}}</p>
+        <p>{{this.description}}</p>
+        <a herf="/posts/{{this.id}}">details</a>
+    </div>
+    {{/each}}
+</main>

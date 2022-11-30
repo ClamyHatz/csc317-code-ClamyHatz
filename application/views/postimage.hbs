@@ -1,14 +1,14 @@
 <body class="container">
-    <form class="postimform" action="viewpost.html" method="POST">
+    <form class="postimform" action="/posts/create" method="POST" enctype="multipart/form-data">
         <fieldset>
             <legend>Post</legend>
             <input class="forms" type="text" name="title" required placeholder="Post Title" />
             <br>
-            <input class="forms" type="text" name="descript" required placeholder="Post Description" />
+            <input class="forms" type="text" name="description" required placeholder="Post Description" />
             <br>
-            <input calss="custom-file-upload" type="file" name="imge" required placeholder="Post Image" />
+            <input class="custom-file-upload" type="file" name="image" required placeholder="Post Image" />
             <br>
-            <input class="check" type="checkbox" id="usepl" name="usepl" value="2" required>
+            <input class="check" type="checkbox" id="usepl" value="2" required>
             <label for="usepl"> Accept Use Policy for uploading images</label>
             <br>
         </fieldset>
