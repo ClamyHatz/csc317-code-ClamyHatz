@@ -43,16 +43,19 @@ input[type=submit] {
 
 .nav {
   text-align: center;
-  margin-top: 10px;
 }
 
 .header {
   text-align: center;
-  padding: 1px 0;
+  padding: auto;
   justify-content: center;
   margin: auto;
-  margin-bottom: 10px;
   width: 250px;
+}
+.headcont{
+  background: url(toppartwebsite.png);
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .container {
@@ -77,7 +80,7 @@ form {
   margin: auto;
   width: 700px;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   margin-top: 30px;
 }
 
@@ -217,53 +220,43 @@ input[type="file" i] {
 }
 
 .indexnav {
-  background-color: red;
+  background-color: rgb(242, 243, 245);
 }
 
 .indexnav:hover {
   background-color: white;
   color: black;
-  border: solid red;
+  border: solid rgb(242, 243, 245);
 }
 
 .loginnav {
-  background-color: rgb(255, 208, 0);
+  background-color: rgb(91, 206, 250);
 }
 
 .loginnav:hover {
   background-color: white;
   color: black;
-  border: solid rgb(255, 208, 0);
-}
-
-.regnav {
-  background-color: green;
-}
-
-.regnav:hover {
-  background-color: white;
-  color: black;
-  border: solid green;
+  border: solid rgb(91, 206, 250);
 }
 
 .postnav {
-  background-color: blue;
+  background-color: rgb(245, 169, 184);
 }
 
 .postnav:hover {
   background-color: white;
   color: black;
-  border: solid blue;
+  border: solid rgb(245, 169, 184);
 }
 
 .viewnav {
-  background-color: purple;
+  background-color: rgb(245, 169, 184);
 }
 
 .viewnav:hover {
   background-color: white;
   color: black;
-  border: solid purple;
+  border: solid rgb(245, 169, 184);
 }
 .alert-danger{
   position: fixed;
