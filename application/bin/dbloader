@@ -72,10 +72,10 @@ async function makePostsTable(connection) {
       createdAT DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
       PRIMARY KEY (id),
       UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE,
-      INDEX postauthor_idx (fk_authorid ASC) VISIBLE,
-      CONSTRAINT postauthor
+      INDEX id_idx (fk_authorid ASC) VISIBLE,
+      CONSTRAINT id
         FOREIGN KEY (fk_authorid)
-        REFERENCES csc317db.useres (id)
+        REFERENCES csc317db.users (id)
         ON DELETE NO ACTION
         ON UPDATE NO ACTION)
     ENGINE = InnoDB`
@@ -99,16 +99,16 @@ async function makeCommentsTable(connection) {
       createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
       UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE,
       PRIMARY KEY (id),
-      INDEX postauthor_idx (fk_authorid ASC) VISIBLE,
       INDEX postpost_idx (fk_postid ASC) VISIBLE,
-      CONSTRAINT commentauthor
-        FOREIGN KEY (fk_authorid)
-        REFERENCES csc317db.useres (id)
-        ON DELETE NO ACTION
-        ON UPDATE NO ACTION,
+      INDEX commentuser_idx (fk_authorid ASC) VISIBLE,
       CONSTRAINT commentpost
         FOREIGN KEY (fk_postid)
         REFERENCES csc317db.posts (id)
+        ON DELETE NO ACTION
+        ON UPDATE NO ACTION,
+      CONSTRAINT commentuser
+        FOREIGN KEY (fk_authorid)
+        REFERENCES csc317db.users (id)
         ON DELETE NO ACTION
         ON UPDATE NO ACTION)
     ENGINE = InnoDB`
