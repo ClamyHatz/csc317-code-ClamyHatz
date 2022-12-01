@@ -9,5 +9,8 @@ module.exports={
             next();
         })
         .catch(err => next(err));
+    },
+    getPostById: function(req, res, next){
+        
     }
 }
