@@ -274,3 +274,36 @@ body.container{
   height: 268px;
   background: url(sakamotoblue.png);
 }
+
+.postimage{
+  max-width: 700px;
+  max-height: 700px;
+}
+
+.PostTitle{
+  font-size: 75px;
+  color: white;
+}
+
+.PostUsername{
+  display: inline;
+  font-weight: bold;
+  color: green;
+}
+
+.PostDate{
+  display: inline;
+  color: white;
+}
+
+.search-button{
+  background: url(magna.png);
+  height: 48px;
+  width: 48px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.search-input{
+  height: 30px;
+}

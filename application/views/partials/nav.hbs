@@ -1,7 +1,7 @@
 <div class="nav">
     <a href="/" class="nav-button">Index</a>
     <form class="search-bar" method="GET" action="/posts/search" enctype="application/x-www-form-urlencoded">
-        <input id="search" class="search" type="text" name="searchTerm" value="{{searchValue}}">
+        <input id="search" class="search-input" type="text" name="searchTerm" value="{{searchValue}}">
         <button type="submit" class="search-button"></button>
     </form>
     {{#if isLoggedIn}}
