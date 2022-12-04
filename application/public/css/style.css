@@ -1,12 +1,11 @@
 a {
-  color: white;
+  color: black;
   padding: 15px 32px;
   text-decoration: none;
   display: inline-block;
   border-radius: 4px;
   margin-left: 15px;
   margin-right: 15px;
-  transition-duration: .4s;
 }
 
 .TOSLink {
@@ -54,6 +53,7 @@ input[type=submit] {
 }
 .headcont{
   background: url(toppartwebsite.png);
+  background-position: center;
   padding-top: 18px;
   padding-bottom: 18px;
 }
@@ -75,7 +75,7 @@ input {
   padding-bottom: 0;
 }
 
-form {
+.forms {
   background-color: white;
   margin: auto;
   width: 700px;
@@ -84,7 +84,7 @@ form {
   margin-top: 30px;
 }
 
-.forms {
+.formsinput {
   border: none;
   border-bottom: 2px solid black;
   background-color: white;
@@ -121,10 +121,9 @@ input[type="file" i] {
 .footer {
   color: white;
   text-align: center;
-  position: absolute;
+  position: fixed;
   top: 95%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 5%;
 }
 
 .invalid {
@@ -145,7 +144,7 @@ input[type="file" i] {
   margin-bottom: 5px !important;
 }
 
-.product-list {
+.index-container {
   display: grid;
   max-width: 1200px;
   min-width: 700px;
@@ -156,7 +155,7 @@ input[type="file" i] {
   padding: 1em;
 }
 
-.product-card {
+.post-card {
   display: grid;
   border-radius: .35em;
   grid-template-areas: "info";
@@ -167,7 +166,7 @@ input[type="file" i] {
   padding-right: 3.5px;
 }
 
-.prod-img {
+.p-image {
   grid-area: info;
   height: 100%;
   width: 100%;
@@ -189,7 +188,7 @@ input[type="file" i] {
   font-size: .8rem;
 }
 
-.prod-title {
+.p-title {
   margin: 0;
   background-color: transparent;
   flex: 1 75%;
@@ -197,67 +196,16 @@ input[type="file" i] {
   font-family: FreeMono, monospace;
 }
 
-#target {
-  height: 100px;
-  background-color: red;
-}
-
-.photo_count {
-  color: white;
-  font-size: 30px;
-}
-
-.photo-count {
-  background-color: white;
-  text-align: center;
-  padding: 1px 0;
-  justify-content: center;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 100px;
-  border: 4px solid red;
-}
-
-.indexnav {
-  background-color: rgb(242, 243, 245);
-}
-
-.indexnav:hover {
-  background-color: white;
-  color: black;
-  border: solid rgb(242, 243, 245);
-}
-
-.loginnav {
+.nav-button {
   background-color: rgb(91, 206, 250);
 }
 
-.loginnav:hover {
+.nav-button:hover {
   background-color: white;
   color: black;
   border: solid rgb(91, 206, 250);
 }
 
-.postnav {
-  background-color: rgb(245, 169, 184);
-}
-
-.postnav:hover {
-  background-color: white;
-  color: black;
-  border: solid rgb(245, 169, 184);
-}
-
-.viewnav {
-  background-color: rgb(245, 169, 184);
-}
-
-.viewnav:hover {
-  background-color: white;
-  color: black;
-  border: solid rgb(245, 169, 184);
-}
 .alert-danger{
   position: fixed;
   margin: auto;
@@ -269,6 +217,7 @@ input[type="file" i] {
   background-color: red;
   border: 4px solid red;
 }
+
 .alert-success{
   position: fixed;
   margin: auto;
@@ -283,4 +232,45 @@ input[type="file" i] {
 
 .postlink{
   color:black;
+}
+
+.search-bar{
+  display: inline;
+}
+
+.nav{
+  background-color: rgb(91, 206, 250);
+}
+
+body.container{
+  background-color: rgb(189, 235, 253);
+}
+
+.header {
+  background-color: rgb(189, 235, 253);
+  border: 4px solid rgb(91, 206, 250);
+}
+
+.forms {
+  border: 4px solid rgb(91, 206, 250);
+}
+
+.sub {
+  background-color: rgb(91, 206, 250);
+  color: white;
+  transition-duration: .4s;
+  border: none;
+  margin-top: 30px;
+}
+
+.sub:hover {
+  background-color: white;
+  color: black;
+  border: solid rgb(91, 206, 250);
+}
+
+#cat{
+  width:188px;
+  height: 268px;
+  background: url(sakamotoblue.png);
 }

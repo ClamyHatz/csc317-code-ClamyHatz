@@ -44,8 +44,28 @@ router.post("/create", isLoggedIn, upload.single("image"), function(req, res, ne
 })
 
 router.get("/search", function(req, res, next){
-  console.log(req.query);
-  res.render('index');
+  let searchTerm = `%${req.query.searchTerm}%`;
+  let originalSearchTerm = req.query.searchTerm;
+  let baseSQL = `
+  SELECT id, title, description, thumbnail, concat_ws(" ", title, description) as haystack
+  FROM posts
+  HAVING haystack like ?;`
+  db.execute(baseSQL, [searchTerm])
+  .then(function([results, fields]){
+    res.locals.results = results;
+    res.locals.searchValue = originalSearchTerm;
+    if(results && results.length){
+      req.flash("success", `${results.length} results found`);
+      req.session.save(function(saveErr){
+        res.render('index');
+      })
+    } else {
+      req.flash("error", `${results.length} results found`);
+      req.session.save(function(saveErr){
+        res.render('404');
+      })
+    }
+  })
 })
 
 module.exports = router;

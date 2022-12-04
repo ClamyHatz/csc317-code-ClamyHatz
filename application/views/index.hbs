@@ -1,10 +1,12 @@
-<main class="container">
-    {{#each results}}
-    <div>
-        <img src="{{this.thumbnail}}">
-        <p>{{this.title}}</p>
-        <p>{{this.description}}</p>
-        <a href="/posts/{{this.id}}" class="postlink">details</a>
+<body class="container">
+    <div class="index-container">
+        {{#each results}}
+        <div class="post-card">
+            <img src="/{{this.thumbnail}}" class="p-image">
+            <p class="p-title">{{this.title}}</p>
+            <p class="p-description">{{this.description}}</p>
+            <a href="/posts/{{this.id}}" class="p-link">details</a>
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
-</main>
+</body>
