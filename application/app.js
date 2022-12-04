@@ -26,7 +26,7 @@ app.engine(
         return !(obj && obj.constructor === Object && Object.keys(obj).length == 0)
       },
       formatDate: function(dateString){
-        return new Date(dateString).toLocaleString();
+        return new Date(dateString).toLocaleString("en-US");
       }
     }, //adding new helpers to handlebars for extra functionality
   })

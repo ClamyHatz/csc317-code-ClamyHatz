@@ -6,4 +6,8 @@
     <a href="/login" class="loginnav">Log in  </a>
     {{/if}}
     <a href="/postimage" class="postnav">Post Image  </a>
+    <form class="search-bar" method="GET" action="/posts/search" enctype="application/x-www-form-urlencoded">
+        <input id="search" class="search" type="text"/>
+        <button type="submit" class="search-button"></button>
+    </form>
 </div>

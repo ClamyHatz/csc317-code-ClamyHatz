@@ -43,4 +43,9 @@ router.post("/create", isLoggedIn, upload.single("image"), function(req, res, ne
         .catch(err => next(err));
 })
 
+router.get("/search", function(req, res, next){
+  console.log(req.query);
+  res.render('index');
+})
+
 module.exports = router;
