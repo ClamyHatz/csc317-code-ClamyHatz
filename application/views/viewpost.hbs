@@ -2,17 +2,19 @@
     <div class="post">
         <br>
         <div class="PostTitle">
-            Post Title (placeholder)
+            {{currentPost.title}}
         </div>
-        Post Author (placeholder)
+        <div class="PostUsername">
+            {{currentPost.username}}
+        </div>
+        <div class="PostDate">
+            {{formatDate currentPost.createdAt}}
+        </div>
         <br>
-        Post Creation Time (placeholder)
+        <img class="postimage" src="{{currentPost.image}}"/>
         <br>
-        Post Image (placeholder)
-        <br>
-    </div>
-    <div class="postImage">
-        <img
-            src="https://static.wikia.nocookie.net/nichijou/images/2/26/Sakamoto.png/revision/latest/scale-to-width-down/238?cb=20190531163434">
+        <div class="PostDescription">
+            {{currentPost.description}}
+        </div>
     </div>
 </body>
