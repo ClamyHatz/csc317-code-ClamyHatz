@@ -1,13 +1,15 @@
 <div class="nav">
-    <a href="/" class="nav-button">Index</a>
-    <form class="search-bar" method="GET" action="/posts/search" enctype="application/x-www-form-urlencoded">
-        <input id="search" class="search-input" type="text" name="searchTerm" value="{{searchValue}}">
-        <button type="submit" class="search-button"></button>
-    </form>
+    <a href="/" class="nav-button index-nav">Index</a>
+    <div class="search-bar-container">
+        <form class="search-bar" method="GET" action="/posts/search" enctype="application/x-www-form-urlencoded">
+            <input id="search" class="search-input" type="text" name="searchTerm" value="{{searchValue}}">
+            <button type="submit" class="search-button"></button>
+        </form>
+    </div>
     {{#if isLoggedIn}}
-    <a class="nav-button" id="logout-button">Log out </a>
+    <a class="nav-button" id="logout-button">Log out</a>
     {{else}}
-    <a href="/login" class="nav-button">Log in  </a>
+    <a href="/login" class="nav-button">Log in</a>
     {{/if}}
-    <a href="/postimage" class="nav-button">Post Image  </a>
+    <a href="/postimage" class="nav-button">Post Image</a>
 </div>

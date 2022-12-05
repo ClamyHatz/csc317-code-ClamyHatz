@@ -60,7 +60,7 @@ router.get("/search", function(req, res, next){
         res.render('index');
       })
     } else {
-      req.flash("error", `${results.length} results found`);
+      req.flash("error", `404 Post Not Found`);
       req.session.save(function(saveErr){
         res.render('404');
       })
