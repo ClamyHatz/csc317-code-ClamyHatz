@@ -24,8 +24,13 @@ module.exports={
             function([results, feilds]){
                 if(results && results.length == 1){
                     res.locals.currentPost = results[0];
+                    next();
+                } else {
+                    req.flash("error", `404 Post Not Found`);
+                    req.session.save(function(saveErr){
+                        res.render('404');
+                    })
                 }
-                next();
         })
     },
 }

@@ -2,7 +2,6 @@ a {
   color: black;
   padding: 15px 32px;
   text-decoration: none;
-  display: inline-block;
   border-radius: 4px;
   margin-left: 15px;
   margin-right: 15px;
@@ -22,12 +21,6 @@ input[type=submit] {
   border-radius: 4px;
   margin-left: 15px;
   margin-right: 15px;
-}
-
-.mainnavs {
-  background-color: white;
-  cursor: not-allowed;
-  font-family: FreeMono, monospace;
 }
 
 .nav {
@@ -163,6 +156,10 @@ input[type="file" i] {
   border-radius: .35rem;
   border-radius: .35rem;
   object-fit: cover;
+}
+
+.p-link{
+  text-decoration: underline !important;
 }
 
 .prod-info {
