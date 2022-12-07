@@ -147,12 +147,14 @@ input[type="file" i] {
   padding-left: 3.5px;
   padding-top: 3.5px;
   padding-right: 3.5px;
+  width: 200px;
+  height: 420px;
 }
 
 .p-image {
   grid-area: info;
-  height: 100%;
-  width: 100%;
+  max-width: 200px;
+  max-height: 300px;
   border-radius: .35rem;
   border-radius: .35rem;
   object-fit: cover;
@@ -162,17 +164,11 @@ input[type="file" i] {
   text-decoration: underline !important;
 }
 
-.prod-info {
-  grid-area: info;
-  display: flex;
-  width: 100%;
-  height: 30px;
-  z-index: 3;
-  justify-self: center;
-  padding: .3em;
-  align-self: flex-end;
-  background-color: aliceblue;
-  font-size: .8rem;
+.p-description{
+  display:-webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .p-title {
@@ -193,27 +189,43 @@ input[type="file" i] {
 }
 
 .alert-danger{
-  position: fixed;
-  margin: auto;
-  width: 250px;
-  left: 50%;
-  margin-left:  -129px;
-  margin-top: 1%;
+  position: absolute;
+  width: fit-content;
+  margin-top: 2%;
   height: auto;
-  background-color: red;
-  border: 4px solid red;
+  background-color: rgb(255, 153, 153);
+  border: 2px solid red;
+  font-weight: bolder;
+  font-size: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .alert-success{
-  position: fixed;
-  margin: auto;
-  width: 250px;
-  left: 50%;
-  margin-left:  -129px;
-  margin-top: 1%;
+  position: absolute;
+  width: fit-content;
+  margin-top: 2%;
   height: auto;
-  background-color: green;
-  border: 4px solid green;
+  background-color: rgb(153, 255, 153);
+  border: 2px solid rgb(0, 255, 0);
+  font-weight: bolder;
+  font-size: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .postlink{
@@ -318,12 +330,14 @@ body.container{
   left: 0;
   right: 0;
   text-align: center;
-  text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
   font-weight: bolder;
-  font-size: 25px;
+  font-size: 40px;
+  -webkit-text-stroke: 2px black;
+  color: white;
 }
 
 .img-404{
   width:100%;
   height: 100%;
 }
+
