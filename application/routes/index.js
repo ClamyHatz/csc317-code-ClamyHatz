@@ -18,13 +18,10 @@ router.get("/registration", function(req,res){
 router.get("/postimage", isLoggedIn, function(req,res){
   res.render('postimage')
 });
-router.get("/viewpost", function(req,res){
-  res.render('viewpost', {js:'viewpost.js'})
-});
 
 router.get("/posts/:id(\\d+)", getPostById, function(req,res){
   console.log(req.params);
-  res.render('viewpost')
+  res.render('viewpost', {js:["viewpost.js"]})
 })
 
 module.exports = router;
