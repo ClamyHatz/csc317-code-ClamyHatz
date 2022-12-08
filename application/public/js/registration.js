@@ -13,8 +13,8 @@ document.getElementById("uname").addEventListener("input", CheckUserName);
 function CheckUserName() { //name of function
     let inputtxt = document.getElementById("uname");
     
-    var parts = /^[a-zA-Z]+$/;//this makes sure the first part is a letter but doesnt allow numbers
-    var partsNumb = /^[a-zA-Z]+[0-9]+$/; //needs  number or it doesnt work
+    var parts = /^[a-zA-Z]/;//this makes sure the first part is a letter but doesnt allow numbers
+    var partsNumb = /^[a-zA-Z]+[0-9]/; //needs  number or it doesnt work
     if(inputtxt.value.match(parts || partsNumb)) { //doesnt need number but allowes it because of the or ||
         inputtxt.setCustomValidity("");// changes the field to valid
         validLook(inputtxt);
