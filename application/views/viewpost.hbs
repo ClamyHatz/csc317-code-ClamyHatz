@@ -1,4 +1,4 @@
-<body class="container">
+<body class="container viewcont">
     <div class="post">
         <br>
         <div class="PostTitle">
@@ -17,8 +17,8 @@
             {{currentPost.description}}
         </div>
     </div>
-    <div class="comments">
-        <input id="comment-text" type="text">
+    <div class="commentform">
+        <input id="comment-text" type="text" class="comment-info">
         <button data-postid="{{currentPost.id}}" id="comment-button" class="comment-button">comment</button>
     </div>
     <div class="comment-section" id="comment-section">

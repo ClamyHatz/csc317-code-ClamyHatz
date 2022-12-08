@@ -3,7 +3,7 @@ function addNewComment(data){
     let newComment = document.createElement('template');
     newComment.innerHTML = `
     <div id="message-${data.commentId}">
-        <p class="comment-author">${data.username}</p>
+        <p class="comment-author">@${data.username}</p>
         <p class="comment-time">${new Date().toLocaleString("en-US")}</p>
         <p class="comment-text">${data.comment}</p>
     </div>`;
