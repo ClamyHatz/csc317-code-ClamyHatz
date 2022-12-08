@@ -21,4 +21,9 @@
         <input id="comment-text" type="text">
         <button data-postid="{{currentPost.id}}" id="comment-button" class="comment-button">comment</button>
     </div>
+    <div class="comment-section" id="comment-section">
+        {{#each currentPost.comments}}
+            {{>comment}}
+        {{/each}}
+    </div>
 </body>
