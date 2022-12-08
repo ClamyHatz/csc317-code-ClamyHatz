@@ -12,7 +12,7 @@ router.get("/login", function(req,res){
   res.render('login')
 });
 router.get("/registration", function(req,res){
-  res.render('registration')
+  res.render('registration', {js:["registration.js"]})
 });
 
 router.get("/postimage", isLoggedIn, function(req,res){
