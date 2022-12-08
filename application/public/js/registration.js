@@ -31,9 +31,9 @@ document.getElementById("pawrd").addEventListener("input", CheckPassword);
 
 function CheckPassword() {
     let inputtxt = document.getElementById("pawrd");
-    var small = /[a-z]+$/g;
-    var big = /[A-Z]+$/g;
-    var num = /[0-9]+$/g;
+    var small = /[a-z]/g;
+    var big = /[A-Z]/g;
+    var num = /[0-9]/;
     var char = /[\W]/g;
     if(inputtxt.value.match(small && big && num && char)){
         inputtxt.setCustomValidity("");// changes the field to valid
